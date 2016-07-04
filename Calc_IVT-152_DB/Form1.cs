@@ -18,22 +18,22 @@ namespace Calc_IVT_152_DB
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            label1.Text = Convert.ToString( Convert.ToDouble(textBox1.Text) + Convert.ToDouble(textBox2.Text) );
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            label1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) - Convert.ToDouble(textBox2.Text));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            label1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox2.Text));
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            label1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) / Convert.ToDouble(textBox2.Text));
         }
 
     }
