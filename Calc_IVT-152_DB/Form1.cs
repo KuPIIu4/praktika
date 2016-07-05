@@ -22,24 +22,8 @@ namespace Calc_IVT_152_DB
             double result;
             double firstValue = Convert.ToDouble(textBox1.Text);
             double secondValue = Convert.ToDouble(textBox2.Text);
-            switch (((Button)sender).Name)
-            {
-                case "buttonAdd": 
-                    result = firstValue + secondValue;
-                    break;
-                case "buttonSub":
-                    result = firstValue - secondValue; 
-                    break;
-                case "buttonMult":
-                    result = firstValue * secondValue;
-                    break;
-                case "buttonDiv":
-                    result = firstValue / secondValue; 
-                    break;
-                default:
-                    throw new Exception("Неизвестная мат. операция");
-            }
-
+            ITwoArgumentsCalculator calc = TwoArgumentsFactory.CreateCalculator(((Button) sender).Name);
+            result = calc.Calculate(firstValue, secondValue);
             label1.Text = result.ToString();
         }
     }
