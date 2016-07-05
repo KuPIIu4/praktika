@@ -44,29 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdditionCalculator.cs" />
-    <Compile Include="CosCalc.cs" />
-    <Compile Include="DivisionCalculator.cs" />
-    <Compile Include="ExponentCalc.cs" />
-    <Compile Include="FactCalc.cs" />
+    <Compile Include="TwoArgsCalc\AdditionCalculator.cs" />
+    <Compile Include="OneArgsCalc\CosCalc.cs" />
+    <Compile Include="TwoArgsCalc\DivisionCalculator.cs" />
+    <Compile Include="TwoArgsCalc\ExponentCalc.cs" />
+    <Compile Include="OneArgsCalc\FactCalc.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="IOneArgCalc.cs" />
-    <Compile Include="ITwoArgumentsCalculator.cs" />
-    <Compile Include="LgCalc.cs" />
-    <Compile Include="LnCalc.cs" />
-    <Compile Include="MultiplyCalculator.cs" />
-    <Compile Include="OneArgCalc.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="OneArgsCalc\IOneArgCalc.cs" />
+    <Compile Include="TwoArgsCalc\ITwoArgumentsCalculator.cs" />
+    <Compile Include="OneArgsCalc\LgCalc.cs" />
+    <Compile Include="OneArgsCalc\LnCalc.cs" />
+    <Compile Include="TwoArgsCalc\MultiplyCalculator.cs" />
+    <Compile Include="OneArgsCalc\OneArgCalc.cs" />
+    <Compile Include="TwoArgsCalc\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RootCalc.cs" />
-    <Compile Include="SinCalc.cs" />
-    <Compile Include="SubstractionCalculator.cs" />
-    <Compile Include="TwoArgumentsFactory.cs" />
+    <Compile Include="TwoArgsCalc\RootCalc.cs" />
+    <Compile Include="OneArgsCalc\SinCalc.cs" />
+    <Compile Include="TwoArgsCalc\SubstractionCalculator.cs" />
+    <Compile Include="TwoArgsCalc\TwoArgumentsFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +92,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

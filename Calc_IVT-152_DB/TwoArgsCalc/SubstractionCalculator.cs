@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calc_IVT_152_DB
+﻿namespace Calc_IVT_152_DB.TwoArgsCalc
 {
     public class SubstractionCalculator : ITwoArgumentsCalculator
     {

@@ -1,4 +1,4 @@
-﻿namespace Calc_IVT_152_DB
+﻿namespace Calc_IVT_152_DB.OneArgsCalc
 {
     public interface IOneArgCalc
     {
