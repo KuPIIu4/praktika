@@ -24,10 +24,10 @@ namespace Calc_IVT_152_DB
             double secondValue = Convert.ToDouble(textBox2.Text);
             switch (((Button)sender).Name)
             {
-                case "buttonPlus": 
+                case "buttonAdd": 
                     result = firstValue + secondValue;
                     break;
-                case "buttonMinus":
+                case "buttonSub":
                     result = firstValue - secondValue; 
                     break;
                 case "buttonMult":

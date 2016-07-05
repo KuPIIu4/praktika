@@ -30,8 +30,8 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonPlus = new System.Windows.Forms.Button();
-            this.buttonMinus = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonSub = new System.Windows.Forms.Button();
             this.buttonMult = new System.Windows.Forms.Button();
             this.buttonDiv = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,25 +52,25 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 1;
             // 
-            // buttonPlus
+            // buttonAdd
             // 
-            this.buttonPlus.Location = new System.Drawing.Point(151, 38);
-            this.buttonPlus.Name = "buttonPlus";
-            this.buttonPlus.Size = new System.Drawing.Size(75, 23);
-            this.buttonPlus.TabIndex = 3;
-            this.buttonPlus.Text = "+";
-            this.buttonPlus.UseVisualStyleBackColor = true;
-            this.buttonPlus.Click += new System.EventHandler(this.button_Click);
+            this.buttonAdd.Location = new System.Drawing.Point(151, 38);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 3;
+            this.buttonAdd.Text = "+";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.button_Click);
             // 
-            // buttonMinus
+            // buttonSub
             // 
-            this.buttonMinus.Location = new System.Drawing.Point(232, 38);
-            this.buttonMinus.Name = "buttonMinus";
-            this.buttonMinus.Size = new System.Drawing.Size(75, 23);
-            this.buttonMinus.TabIndex = 4;
-            this.buttonMinus.Text = "-";
-            this.buttonMinus.UseVisualStyleBackColor = true;
-            this.buttonMinus.Click += new System.EventHandler(this.button_Click);
+            this.buttonSub.Location = new System.Drawing.Point(232, 38);
+            this.buttonSub.Name = "buttonSub";
+            this.buttonSub.Size = new System.Drawing.Size(75, 23);
+            this.buttonSub.TabIndex = 4;
+            this.buttonSub.Text = "-";
+            this.buttonSub.UseVisualStyleBackColor = true;
+            this.buttonSub.Click += new System.EventHandler(this.button_Click);
             // 
             // buttonMult
             // 
@@ -108,8 +108,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDiv);
             this.Controls.Add(this.buttonMult);
-            this.Controls.Add(this.buttonMinus);
-            this.Controls.Add(this.buttonPlus);
+            this.Controls.Add(this.buttonSub);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
@@ -123,8 +123,8 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button buttonPlus;
-        private System.Windows.Forms.Button buttonMinus;
+        private System.Windows.Forms.Button buttonAdd;
+        private System.Windows.Forms.Button buttonSub;
         private System.Windows.Forms.Button buttonMult;
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Label label1;
