@@ -44,29 +44,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TwoArgsCalc\AdditionCalculator.cs" />
-    <Compile Include="OneArgsCalc\CosCalc.cs" />
-    <Compile Include="TwoArgsCalc\DivisionCalculator.cs" />
-    <Compile Include="TwoArgsCalc\ExponentCalc.cs" />
-    <Compile Include="OneArgsCalc\FactCalc.cs" />
+    <Compile Include="TwoArgsCalculator\AdditionCalculator.cs" />
+    <Compile Include="OneArgsCalculator\CosCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\DivisionCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\ExponentCalculator.cs" />
+    <Compile Include="OneArgsCalculator\FactorialCalculator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OneArgsCalc\IOneArgCalc.cs" />
-    <Compile Include="TwoArgsCalc\ITwoArgumentsCalculator.cs" />
-    <Compile Include="OneArgsCalc\LgCalc.cs" />
-    <Compile Include="OneArgsCalc\LnCalc.cs" />
-    <Compile Include="TwoArgsCalc\MultiplyCalculator.cs" />
-    <Compile Include="OneArgsCalc\OneArgCalc.cs" />
-    <Compile Include="TwoArgsCalc\Program.cs" />
+    <Compile Include="OneArgsCalculator\IOneArgumentCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\ITwoArgumentsCalculator.cs" />
+    <Compile Include="OneArgsCalculator\LgCalculator.cs" />
+    <Compile Include="OneArgsCalculator\LnCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\MultiplyCalculator.cs" />
+    <Compile Include="OneArgsCalculator\OneArgumentCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TwoArgsCalc\RootCalc.cs" />
-    <Compile Include="OneArgsCalc\SinCalc.cs" />
-    <Compile Include="TwoArgsCalc\SubstractionCalculator.cs" />
-    <Compile Include="TwoArgsCalc\TwoArgumentsFactory.cs" />
+    <Compile Include="TwoArgsCalculator\RootCalculator.cs" />
+    <Compile Include="OneArgsCalculator\SinCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\SubstractionCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\TwoArgumentsFactory.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

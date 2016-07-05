@@ -14,20 +14,18 @@ namespace Calc_IVT_152_DB
 
         private void button_ClickTwoArg(object sender, EventArgs e)
         {
-            double result;
             double firstValue = Convert.ToDouble(textBox1.Text);
             double secondValue = Convert.ToDouble(textBox2.Text);
             ITwoArgumentsCalculator calc = TwoArgumentsFactory.CreateCalculator(((Button) sender).Name);
-            result = calc.Calculate(firstValue, secondValue);
+            double result = calc.Calculate(firstValue, secondValue);
             label1.Text = result.ToString();
         }
 
         private void button_ClickOneArg(object sender, EventArgs e)
         {
-            double result;
             double firstValue = Convert.ToDouble(textBox1.Text);
-            IOneArgCalc calc = OneArgCalc.CreateCalculator(((Button)sender).Name);
-            result = calc.Calculate(firstValue);
+            IOneArgumentCalculator calc = OneArgumentCalculator.CreateCalculator(((Button)sender).Name);
+            double result = calc.Calculate(firstValue);
             label1.Text = result.ToString();
         }
 
