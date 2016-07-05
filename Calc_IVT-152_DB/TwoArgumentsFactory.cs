@@ -20,6 +20,10 @@ namespace Calc_IVT_152_DB
                     return new MultiplyCalculator();              
                 case "buttonDiv":
                     return new DivisionCalculator();
+                case "buttonRoot":
+                    return new RootCalc();
+                case "buttonExponent":
+                    return new ExponentCalc();
                 default:
                     throw new Exception("Неизвестная мат. операция");
             }

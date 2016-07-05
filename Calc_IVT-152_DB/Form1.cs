@@ -17,7 +17,7 @@ namespace Calc_IVT_152_DB
             InitializeComponent();
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void button_ClickTwoArg(object sender, EventArgs e)
         {
             double result;
             double firstValue = Convert.ToDouble(textBox1.Text);
@@ -26,5 +26,15 @@ namespace Calc_IVT_152_DB
             result = calc.Calculate(firstValue, secondValue);
             label1.Text = result.ToString();
         }
+
+        private void button_ClickOneArg(object sender, EventArgs e)
+        {
+            double result;
+            double firstValue = Convert.ToDouble(textBox1.Text);
+            IOneArgCalc calc = OneArgCalc.CreateCalculator(((Button)sender).Name);
+            result = calc.Calculate(firstValue);
+            label1.Text = result.ToString();
+        }
+
     }
 }

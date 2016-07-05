@@ -35,6 +35,13 @@
             this.buttonMult = new System.Windows.Forms.Button();
             this.buttonDiv = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonSin = new System.Windows.Forms.Button();
+            this.buttonCos = new System.Windows.Forms.Button();
+            this.buttonLn = new System.Windows.Forms.Button();
+            this.buttonLg = new System.Windows.Forms.Button();
+            this.buttonFact = new System.Windows.Forms.Button();
+            this.buttonRoot = new System.Windows.Forms.Button();
+            this.buttonExponent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,7 +67,7 @@
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.button_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
             // buttonSub
             // 
@@ -70,7 +77,7 @@
             this.buttonSub.TabIndex = 4;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = true;
-            this.buttonSub.Click += new System.EventHandler(this.button_Click);
+            this.buttonSub.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
             // buttonMult
             // 
@@ -80,7 +87,7 @@
             this.buttonMult.TabIndex = 5;
             this.buttonMult.Text = "*";
             this.buttonMult.UseVisualStyleBackColor = true;
-            this.buttonMult.Click += new System.EventHandler(this.button_Click);
+            this.buttonMult.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
             // buttonDiv
             // 
@@ -90,7 +97,7 @@
             this.buttonDiv.TabIndex = 6;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = true;
-            this.buttonDiv.Click += new System.EventHandler(this.button_Click);
+            this.buttonDiv.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
             // label1
             // 
@@ -100,11 +107,88 @@
             this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
             // 
+            // buttonSin
+            // 
+            this.buttonSin.Location = new System.Drawing.Point(151, 67);
+            this.buttonSin.Name = "buttonSin";
+            this.buttonSin.Size = new System.Drawing.Size(75, 23);
+            this.buttonSin.TabIndex = 8;
+            this.buttonSin.Text = "Sin";
+            this.buttonSin.UseVisualStyleBackColor = true;
+            this.buttonSin.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonCos
+            // 
+            this.buttonCos.Location = new System.Drawing.Point(232, 67);
+            this.buttonCos.Name = "buttonCos";
+            this.buttonCos.Size = new System.Drawing.Size(75, 23);
+            this.buttonCos.TabIndex = 9;
+            this.buttonCos.Text = "Cos";
+            this.buttonCos.UseVisualStyleBackColor = true;
+            this.buttonCos.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonLn
+            // 
+            this.buttonLn.Location = new System.Drawing.Point(313, 67);
+            this.buttonLn.Name = "buttonLn";
+            this.buttonLn.Size = new System.Drawing.Size(75, 23);
+            this.buttonLn.TabIndex = 10;
+            this.buttonLn.Text = "Ln";
+            this.buttonLn.UseVisualStyleBackColor = true;
+            this.buttonLn.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonLg
+            // 
+            this.buttonLg.Location = new System.Drawing.Point(394, 67);
+            this.buttonLg.Name = "buttonLg";
+            this.buttonLg.Size = new System.Drawing.Size(75, 23);
+            this.buttonLg.TabIndex = 11;
+            this.buttonLg.Text = "Lg";
+            this.buttonLg.UseVisualStyleBackColor = true;
+            this.buttonLg.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonFact
+            // 
+            this.buttonFact.Location = new System.Drawing.Point(151, 96);
+            this.buttonFact.Name = "buttonFact";
+            this.buttonFact.Size = new System.Drawing.Size(75, 23);
+            this.buttonFact.TabIndex = 12;
+            this.buttonFact.Text = "n!";
+            this.buttonFact.UseVisualStyleBackColor = true;
+            this.buttonFact.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonRoot
+            // 
+            this.buttonRoot.Location = new System.Drawing.Point(232, 96);
+            this.buttonRoot.Name = "buttonRoot";
+            this.buttonRoot.Size = new System.Drawing.Size(75, 23);
+            this.buttonRoot.TabIndex = 13;
+            this.buttonRoot.Text = "Root";
+            this.buttonRoot.UseVisualStyleBackColor = true;
+            this.buttonRoot.Click += new System.EventHandler(this.button_ClickTwoArg);
+            // 
+            // buttonExponent
+            // 
+            this.buttonExponent.Location = new System.Drawing.Point(313, 96);
+            this.buttonExponent.Name = "buttonExponent";
+            this.buttonExponent.Size = new System.Drawing.Size(75, 23);
+            this.buttonExponent.TabIndex = 14;
+            this.buttonExponent.Text = "Exponent";
+            this.buttonExponent.UseVisualStyleBackColor = true;
+            this.buttonExponent.Click += new System.EventHandler(this.button_ClickTwoArg);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 342);
+            this.Controls.Add(this.buttonExponent);
+            this.Controls.Add(this.buttonRoot);
+            this.Controls.Add(this.buttonFact);
+            this.Controls.Add(this.buttonLg);
+            this.Controls.Add(this.buttonLn);
+            this.Controls.Add(this.buttonCos);
+            this.Controls.Add(this.buttonSin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDiv);
             this.Controls.Add(this.buttonMult);
@@ -114,6 +198,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "СУПЕР ПРЕКРАСНЫЙ КАЛЬКУЛЯТОР over 9k";
+            this.Click += new System.EventHandler(this.button_ClickTwoArg);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +213,13 @@
         private System.Windows.Forms.Button buttonMult;
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSin;
+        private System.Windows.Forms.Button buttonCos;
+        private System.Windows.Forms.Button buttonLn;
+        private System.Windows.Forms.Button buttonLg;
+        private System.Windows.Forms.Button buttonFact;
+        private System.Windows.Forms.Button buttonRoot;
+        private System.Windows.Forms.Button buttonExponent;
     }
 }
 
