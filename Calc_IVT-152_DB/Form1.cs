@@ -16,37 +16,31 @@ namespace Calc_IVT_152_DB
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button_Click(object sender, EventArgs e)
         {
+            double result;
             double firstValue = Convert.ToDouble(textBox1.Text);
             double secondValue = Convert.ToDouble(textBox2.Text);
-            double result = firstValue + secondValue;
+            switch (((Button)sender).Name)
+            {
+                case "buttonPlus": 
+                    result = firstValue + secondValue;
+                    break;
+                case "buttonMinus":
+                    result = firstValue - secondValue; 
+                    break;
+                case "buttonMult":
+                    result = firstValue * secondValue;
+                    break;
+                case "buttonDiv":
+                    result = firstValue / secondValue; 
+                    break;
+                default:
+                    throw new Exception("Неизвестная мат. операция");
+            }
+
             label1.Text = result.ToString();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            double firstValue = Convert.ToDouble(textBox1.Text);
-            double secondValue = Convert.ToDouble(textBox2.Text);
-            double result = firstValue - secondValue;
-            label1.Text = result.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            double firstValue = Convert.ToDouble(textBox1.Text);
-            double secondValue = Convert.ToDouble(textBox2.Text);
-            double result = firstValue * secondValue;
-            label1.Text = result.ToString();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            double firstValue = Convert.ToDouble(textBox1.Text);
-            double secondValue = Convert.ToDouble(textBox2.Text);
-            double result = firstValue / secondValue;
-            label1.Text = result.ToString();
-        }
-
     }
 }
