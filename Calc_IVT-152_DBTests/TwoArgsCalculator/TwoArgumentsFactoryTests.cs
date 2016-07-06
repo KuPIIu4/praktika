@@ -1,28 +1,22 @@
 ﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.TwoArgsCalc
 {
-    public static class TwoArgumentsFactory
+    public class TwoArgumentFactoryTests
     {
-        public static ITwoArgumentsCalculator CreateCalculator(string calcName)
+        [TestCase("buttonAdd", typeof(AdditionCalculator))]
+        [TestCase("buttonSub", typeof(SubstractionCalculator))]
+        [TestCase("buttonMult", typeof(MultiplyCalculator))]
+        [TestCase("buttonDiv", typeof(DivisionCalculator))]
+        [TestCase("buttonRoot", typeof(RootCalculator))]
+        [TestCase("buttonExponent", typeof(ExponentCalculator))]
+        [TestCase("buttonPercent", typeof(PercentCalculator))]
+        [TestCase("buttonLog", typeof(LogCalculator))]
+        public void CalculateTest(string name, Type type)
         {
-            switch (calcName)
-            {
-                /*case "buttonAdd":
-                    return new AdditionCalculatorTest();
-                case "buttonSub":
-                    return new SubstractionCalculator();
-                case "buttonMult":
-                    return new MultiplyCalculator();              
-                case "buttonDiv":
-                    return new DivisionCalculator();
-                case "buttonRoot":
-                    return new RootCalculator();
-                case "buttonExponent":
-                    return new ExponentCalculator();*/
-                default:
-                    throw new Exception("Неизвестная мат. операция");
-            }
+            var calculator = TwoArgumentsFactory.CreateCalculator(name);
+            Assert.IsInstanceOf(type, calculator);
         }
     }
 }

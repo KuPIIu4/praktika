@@ -46,7 +46,6 @@
     <Compile Include="OneArgsCalculator\CosCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\CotCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\FactorialCalculatorTests.cs" />
-    <Compile Include="OneArgsCalculator\IOneArgumentCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\LgCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\LnCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\OneArgumentCalculatorTests.cs" />
@@ -56,7 +55,6 @@
     <Compile Include="TwoArgsCalculator\AdditionCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\DivisionCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\ExponentCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\ITwoArgumentsCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\LogCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\MultiplyCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\PercentCalculatorTests.cs" />

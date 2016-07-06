@@ -1,26 +1,19 @@
 ﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public static class OneArgumentCalculator
+    public class OneArgumentCalculatorTests
     {
-        public static IOneArgumentCalculator CreateCalculator(string calcName)
+        [TestCase("buttonSin", typeof(SinCalculator))]
+        [TestCase("buttonCos", typeof(CosCalculator))]
+        [TestCase("buttonFact", typeof(FactorialCalculator))]
+        [TestCase("buttonLn", typeof(LnCalculator))]
+        [TestCase("buttonLg", typeof(LgCalculator))]
+        public void CalculateTest(string name, Type type)
         {
-            switch (calcName)
-            {
-              /*  case "buttonSin":
-                    return new SinCalculator();
-                case "buttonCos":
-                    return new CosCalculator();
-                case "buttonFact":
-                    return new FactorialCalc();
-                case "buttonLn":
-                    return new LnCalculator();
-                case "buttonLg":
-                    return new LgCalculator();*/
-                default:
-                    throw new Exception("Неизвестная мат. операция");
-            }
+            var calculator = OneArgumentCalculator.CreateCalculator(name);
+            Assert.IsInstanceOf(type, calculator);
         }
     }
 }
