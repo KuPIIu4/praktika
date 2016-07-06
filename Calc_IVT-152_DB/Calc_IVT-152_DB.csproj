@@ -46,6 +46,9 @@
   <ItemGroup>
     <Compile Include="OneArgsCalculator\CotCalculator.cs" />
     <Compile Include="OneArgsCalculator\TanCalculator.cs" />
+    <Compile Include="SortArray\ISortArray.cs" />
+    <Compile Include="SortArray\BubbleSort.cs" />
+    <Compile Include="SortArray\SortArrayFactory.cs" />
     <Compile Include="TwoArgsCalculator\AdditionCalculator.cs" />
     <Compile Include="OneArgsCalculator\CosCalculator.cs" />
     <Compile Include="TwoArgsCalculator\DivisionCalculator.cs" />

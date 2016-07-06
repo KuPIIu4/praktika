@@ -43,5 +43,10 @@ namespace Calc_IVT_152_DB
             }
         }
 
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }
