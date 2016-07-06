@@ -14,16 +14,33 @@ namespace Calc_IVT_152_DB
 
         private void button_ClickTwoArg(object sender, EventArgs e)
         {
-            double firstValue = Convert.ToDouble(textBox1.Text);
-            double secondValue = Convert.ToDouble(textBox2.Text);
-            ITwoArgumentsCalculator calc = TwoArgumentsFactory.CreateCalculator(((Button) sender).Name);
+            double firstValue = 0;
+            double secondValue = 0;
+            try
+            {
+                firstValue = Convert.ToDouble(textBox1.Text);
+                secondValue = Convert.ToDouble(textBox2.Text);
+            }
+            catch 
+            {
+                throw new Exception("Неверный ввод");
+            }
+            ITwoArgumentsCalculator calc = TwoArgumentsFactory.CreateCalculator(((Button)sender).Name);
             double result = calc.Calculate(firstValue, secondValue);
             label1.Text = result.ToString();
         }
 
         private void button_ClickOneArg(object sender, EventArgs e)
         {
-            double firstValue = Convert.ToDouble(textBox1.Text);
+            double firstValue = 0;
+            try
+            {
+                firstValue = Convert.ToDouble(textBox1.Text);
+            }
+            catch (Exception exp)
+            {
+                throw new Exception("Неверный ввод");
+            }
             IOneArgumentCalculator calc = OneArgumentCalculator.CreateCalculator(((Button)sender).Name);
             double result = calc.Calculate(firstValue);
             label1.Text = result.ToString();

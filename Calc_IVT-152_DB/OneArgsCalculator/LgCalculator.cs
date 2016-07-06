@@ -6,6 +6,10 @@ namespace Calc_IVT_152_DB.OneArgsCalc
     {
         public double Calculate(double firstArgument)
         {
+            if (firstArgument <= 0.0)
+            {
+                throw new Exception("Не существует");
+            }
             return Math.Log10(firstArgument);
         }
     }
