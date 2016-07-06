@@ -3,14 +3,14 @@
 namespace Calc_IVT_152_DB.TwoArgsCalc
 {
     [TestFixture]
-    public class MultiplyCalculatorTests
+    public class PercentCalculatorTests
     {
         [Test]
         public void CalculateTest()
         {
-            MultiplyCalculator calculator = new MultiplyCalculator();
+            PercentCalculator calculator = new PercentCalculator();
             double result = calculator.Calculate(2, 2);
-            Assert.AreEqual(4, result);
+            Assert.AreEqual(0.04, result);
         }
     }
 }

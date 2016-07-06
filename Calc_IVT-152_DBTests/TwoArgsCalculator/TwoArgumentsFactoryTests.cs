@@ -8,8 +8,8 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
         {
             switch (calcName)
             {
-                case "buttonAdd":
-                    return new AdditionCalculator();
+                /*case "buttonAdd":
+                    return new AdditionCalculatorTest();
                 case "buttonSub":
                     return new SubstractionCalculator();
                 case "buttonMult":
@@ -19,7 +19,7 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
                 case "buttonRoot":
                     return new RootCalculator();
                 case "buttonExponent":
-                    return new ExponentCalculator();
+                    return new ExponentCalculator();*/
                 default:
                     throw new Exception("Неизвестная мат. операция");
             }

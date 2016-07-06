@@ -1,10 +1,16 @@
-﻿namespace Calc_IVT_152_DB.TwoArgsCalc
+﻿using NUnit.Framework;
+
+namespace Calc_IVT_152_DB.TwoArgsCalc
 {
-    public class DivisionCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class DivisionCalculatorTests
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return firstArgument / secondArgument;
+            DivisionCalculator calculator = new DivisionCalculator();
+            double result = calculator.Calculate(2, 2);
+            Assert.AreEqual(1, result);
         }
     }
 }

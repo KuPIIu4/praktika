@@ -1,12 +1,16 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.TwoArgsCalc
 {
-    public class ExponentCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class ExponentCalculatorTests
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return Math.Pow(firstArgument, secondArgument);
+            ExponentCalculator calculator = new ExponentCalculator();
+            double result = calculator.Calculate(2, 2);
+            Assert.AreEqual(4, result);
         }
     }
 }

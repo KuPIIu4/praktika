@@ -1,10 +1,16 @@
-﻿namespace Calc_IVT_152_DB.TwoArgsCalc
+﻿using NUnit.Framework;
+
+namespace Calc_IVT_152_DB.TwoArgsCalc
 {
-    public class SubstractionCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class SubstractionCalculatorTests
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return firstArgument - secondArgument;
+            SubstractionCalculator calculator = new SubstractionCalculator();
+            double result = calculator.Calculate(2, 2);
+            Assert.AreEqual(0, result);
         }
     }
 }
