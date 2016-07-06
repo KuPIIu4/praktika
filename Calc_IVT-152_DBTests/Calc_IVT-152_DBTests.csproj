@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.4.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.4.1\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,21 +44,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OneArgsCalculator\CosCalculatorTests.cs" />
+    <Compile Include="OneArgsCalculator\CotCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\FactorialCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\IOneArgumentCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\LgCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\LnCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\OneArgumentCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\SinCalculatorTests.cs" />
+    <Compile Include="OneArgsCalculator\TanCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TwoArgsCalculator\AdditionCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\DivisionCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\ExponentCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\ITwoArgumentsCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\MultiplyCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\RootCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\SubstractionCalculatorTests.cs" />
-    <Compile Include="TwoArgsCalculator\TwoArgumentsFactoryTests.cs" />
+    <Compile Include="TwoArgsCalculator\DivisionCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\ExponentCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\ITwoArgumentsCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\LogCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\MultiplyCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\PercentCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\RootCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\SubstractionCalculator.cs" />
+    <Compile Include="TwoArgsCalculator\TwoArgumentsFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calc_IVT-152_DB\Calc_IVT-152_DB.csproj">
+      <Project>{b6d2d447-1855-4f83-9218-b8622ad48c5e}</Project>
+      <Name>Calc_IVT-152_DB</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

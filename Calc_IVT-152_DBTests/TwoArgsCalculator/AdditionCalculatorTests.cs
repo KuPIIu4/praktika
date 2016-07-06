@@ -1,10 +1,16 @@
-﻿namespace Calc_IVT_152_DB.TwoArgsCalc
+﻿using NUnit.Framework;
+
+namespace Calc_IVT_152_DB.TwoArgsCalc
 {
-    public class AdditionCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class AdditionCalculatorTests
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return firstArgument + secondArgument;
+            AdditionCalculator calculator = new AdditionCalculator();
+            double result = calculator.Calculate(2,2);
+            Assert.AreEqual(4,result);
         }
     }
 }

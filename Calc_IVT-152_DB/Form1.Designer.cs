@@ -197,7 +197,7 @@
             this.buttonPercent.Name = "buttonPercent";
             this.buttonPercent.Size = new System.Drawing.Size(75, 23);
             this.buttonPercent.TabIndex = 16;
-            this.buttonPercent.Text = "Percent";
+            this.buttonPercent.Text = "%";
             this.buttonPercent.UseVisualStyleBackColor = true;
             this.buttonPercent.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
