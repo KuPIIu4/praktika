@@ -15,6 +15,12 @@ namespace Calc_IVT_152_DB.OneArgsCalc
             double result = calculator.Calculate(first);
             Assert.AreEqual(expected, result, 0.0001);
         }
+        [Test]
+        public void CalculateTestZero()
+        {
+            LnCalculator calculator = new LnCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(-58));
+        }
     }
 }
 

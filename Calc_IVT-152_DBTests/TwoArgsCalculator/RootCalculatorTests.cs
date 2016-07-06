@@ -15,5 +15,11 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
             double result = calculator.Calculate(first, second);
             Assert.AreEqual(expected, result);
         }
+        [Test]
+        public void CalculateTestZero()
+        {
+            RootCalculator calculator = new RootCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(-5, 2));
+        }
     }
 }

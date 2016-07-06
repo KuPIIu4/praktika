@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
@@ -13,6 +14,12 @@ namespace Calc_IVT_152_DB.OneArgsCalc
             LgCalculator calculator = new LgCalculator();
             double result = calculator.Calculate(first);
             Assert.AreEqual(expected, result, 0.0001);
+        }
+        [Test]
+        public void CalculateTestZero()
+        {
+            LgCalculator calculator = new LgCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(-58));
         }
     }
 }

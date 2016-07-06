@@ -6,7 +6,7 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
     {
         public double Calculate(double firstArgument, double secondArgument)
         {
-            if (firstArgument < 0.0 && secondArgument < 1)
+            if (firstArgument < 0.0 && secondArgument < 1 && secondArgument != 0)
             {
                 throw new Exception("Не существует");
             }

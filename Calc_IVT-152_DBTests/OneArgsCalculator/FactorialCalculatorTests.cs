@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
@@ -13,6 +14,12 @@ namespace Calc_IVT_152_DB.OneArgsCalc
             FactorialCalculator calculator = new FactorialCalculator();
             double result = calculator.Calculate(first);
             Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void CalculateTestZero()
+        {
+            FactorialCalculator calculator = new FactorialCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(-58));
         }
     }
 }

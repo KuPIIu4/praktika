@@ -6,7 +6,7 @@ namespace Calc_IVT_152_DB.OneArgsCalc
     [TestFixture]
     public class CotCalculatorTests
     {
-        [TestCase(0, double.PositiveInfinity)]
+        [TestCase(3 * Math.PI / 2, 0.0)]
         [TestCase(Math.PI / 4, 1)]
         [TestCase(Math.PI / 2, 0.0)]
         public void CalculateTest(double first, double expected)
@@ -14,6 +14,12 @@ namespace Calc_IVT_152_DB.OneArgsCalc
             CotCalculator calculator = new CotCalculator();
             double result = calculator.Calculate(first);
             Assert.AreEqual(expected, result, 0.0001);
+        }
+        [Test]
+        public void CalculateTestZero()
+        {
+            CotCalculator calculator = new CotCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(0));
         }
     }
 }

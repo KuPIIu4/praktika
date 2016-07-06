@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.TwoArgsCalc
 {
@@ -13,6 +14,12 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
             LogCalculator calculator = new LogCalculator();
             double result = calculator.Calculate(first, second);
             Assert.AreEqual(expected, result);
+        }
+        [Test]
+        public void CalculateTestZero()
+        {
+            LogCalculator calculator = new LogCalculator();
+            Assert.Throws<Exception>(() => calculator.Calculate(-1, 1));
         }
     }
 }

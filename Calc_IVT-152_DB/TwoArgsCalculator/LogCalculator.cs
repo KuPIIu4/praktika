@@ -12,5 +12,6 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
             }
             return (Math.Log10(firstArgument)/Math.Log10(secondArgument));
         }
+
     }
 }
