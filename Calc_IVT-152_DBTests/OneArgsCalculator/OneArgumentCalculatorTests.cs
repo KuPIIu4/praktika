@@ -18,10 +18,6 @@ namespace Calc_IVT_152_DB.OneArgsCalc
                     return new LnCalculator();
                 case "buttonLg":
                     return new LgCalculator();
-                case "buttonTan":
-                    return new TanCalculator();
-                case "buttonCot":
-                    return new CotCalculator();
                 default:
                     throw new Exception("Неизвестная мат. операция");
             }

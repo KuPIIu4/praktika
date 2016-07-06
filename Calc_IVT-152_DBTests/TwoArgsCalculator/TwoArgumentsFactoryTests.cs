@@ -20,10 +20,6 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
                     return new RootCalculator();
                 case "buttonExponent":
                     return new ExponentCalculator();
-                case "buttonPercent":
-                    return new PercentCalculator();
-                case "buttonLog":
-                    return new LogCalculator();
                 default:
                     throw new Exception("Неизвестная мат. операция");
             }

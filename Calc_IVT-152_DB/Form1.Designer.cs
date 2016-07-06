@@ -42,6 +42,10 @@
             this.buttonFact = new System.Windows.Forms.Button();
             this.buttonRoot = new System.Windows.Forms.Button();
             this.buttonExponent = new System.Windows.Forms.Button();
+            this.buttonLog = new System.Windows.Forms.Button();
+            this.buttonPercent = new System.Windows.Forms.Button();
+            this.buttonTan = new System.Windows.Forms.Button();
+            this.buttonCot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -177,11 +181,55 @@
             this.buttonExponent.UseVisualStyleBackColor = true;
             this.buttonExponent.Click += new System.EventHandler(this.button_ClickTwoArg);
             // 
+            // buttonLog
+            // 
+            this.buttonLog.Location = new System.Drawing.Point(394, 96);
+            this.buttonLog.Name = "buttonLog";
+            this.buttonLog.Size = new System.Drawing.Size(75, 23);
+            this.buttonLog.TabIndex = 15;
+            this.buttonLog.Text = "Log";
+            this.buttonLog.UseVisualStyleBackColor = true;
+            this.buttonLog.Click += new System.EventHandler(this.button_ClickTwoArg);
+            // 
+            // buttonPercent
+            // 
+            this.buttonPercent.Location = new System.Drawing.Point(151, 125);
+            this.buttonPercent.Name = "buttonPercent";
+            this.buttonPercent.Size = new System.Drawing.Size(75, 23);
+            this.buttonPercent.TabIndex = 16;
+            this.buttonPercent.Text = "Percent";
+            this.buttonPercent.UseVisualStyleBackColor = true;
+            this.buttonPercent.Click += new System.EventHandler(this.button_ClickTwoArg);
+            // 
+            // buttonTan
+            // 
+            this.buttonTan.Location = new System.Drawing.Point(232, 125);
+            this.buttonTan.Name = "buttonTan";
+            this.buttonTan.Size = new System.Drawing.Size(75, 23);
+            this.buttonTan.TabIndex = 17;
+            this.buttonTan.Text = "Tan";
+            this.buttonTan.UseVisualStyleBackColor = true;
+            this.buttonTan.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
+            // buttonCot
+            // 
+            this.buttonCot.Location = new System.Drawing.Point(313, 125);
+            this.buttonCot.Name = "buttonCot";
+            this.buttonCot.Size = new System.Drawing.Size(75, 23);
+            this.buttonCot.TabIndex = 18;
+            this.buttonCot.Text = "Cot";
+            this.buttonCot.UseVisualStyleBackColor = true;
+            this.buttonCot.Click += new System.EventHandler(this.button_ClickOneArg);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 342);
+            this.Controls.Add(this.buttonCot);
+            this.Controls.Add(this.buttonTan);
+            this.Controls.Add(this.buttonPercent);
+            this.Controls.Add(this.buttonLog);
             this.Controls.Add(this.buttonExponent);
             this.Controls.Add(this.buttonRoot);
             this.Controls.Add(this.buttonFact);
@@ -220,6 +268,10 @@
         private System.Windows.Forms.Button buttonFact;
         private System.Windows.Forms.Button buttonRoot;
         private System.Windows.Forms.Button buttonExponent;
+        private System.Windows.Forms.Button buttonLog;
+        private System.Windows.Forms.Button buttonPercent;
+        private System.Windows.Forms.Button buttonTan;
+        private System.Windows.Forms.Button buttonCot;
     }
 }
 
