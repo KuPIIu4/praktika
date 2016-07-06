@@ -5,12 +5,14 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
     [TestFixture]
     public class LogCalculatorTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(2, 2, 1)]
+        [TestCase(1, 2, 0)]
+        [TestCase(9, 3, 2)]
+        public void CalculateTest(double first, double second, double expected)
         {
             LogCalculator calculator = new LogCalculator();
-            double result = calculator.Calculate(2, 2);
-            Assert.AreEqual(1, result);
+            double result = calculator.Calculate(first, second);
+            Assert.AreEqual(expected, result);
         }
     }
 }

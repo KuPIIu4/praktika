@@ -6,12 +6,14 @@ namespace Calc_IVT_152_DB.TwoArgsCalc
     [TestFixture]
     public class RootCalculatorTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(4, 2, 2)]
+        [TestCase(8, 3, 2)]
+        [TestCase(125, 3, 5)]
+        public void CalculateTest(double first, double second, double expected)
         {
             RootCalculator calculator = new RootCalculator();
-            double result = calculator.Calculate(4, 2);
-            Assert.AreEqual(2, result);
+            double result = calculator.Calculate(first, second);
+            Assert.AreEqual(expected, result);
         }
     }
 }
