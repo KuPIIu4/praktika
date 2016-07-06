@@ -1,12 +1,16 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class CosCalculator : IOneArgumentCalculator
+    [TestFixture]
+    public class CosCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return Math.Cos(firstArgument);
+            CosCalculator calculator = new CosCalculator();
+            double result = calculator.Calculate(0);
+            Assert.AreEqual(1,result);
         }
     }
 }

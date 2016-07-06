@@ -1,6 +1,6 @@
 ﻿namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class FactorialCalc : IOneArgumentCalculator
+    public class FactorialCalculator : IOneArgumentCalculator
     {
         public double Calculate(double firstArgument)
         {

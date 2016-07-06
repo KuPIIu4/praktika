@@ -1,12 +1,17 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class SinCalculator : IOneArgumentCalculator
+    [TestFixture]
+    public class SinCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return Math.Sin(firstArgument);
+            SinCalculator calculator = new SinCalculator();
+            double result = calculator.Calculate(0);
+            Assert.AreEqual(0,result);
         }
     }
 }
+

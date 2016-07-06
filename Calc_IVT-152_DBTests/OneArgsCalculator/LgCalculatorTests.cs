@@ -1,12 +1,17 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class LgCalculator : IOneArgumentCalculator
+    [TestFixture]
+    public class LgCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return Math.Log10(firstArgument);
+            LgCalculator calculator = new LgCalculator();
+            double result = calculator.Calculate(10);
+            Assert.AreEqual(1,result);
         }
     }
 }
+

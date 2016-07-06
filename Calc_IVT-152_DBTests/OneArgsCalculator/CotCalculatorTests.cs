@@ -1,12 +1,17 @@
 ﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class CotCalculator : IOneArgumentCalculator
+    [TestFixture]
+    public class CotCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return (1.0/Math.Tan(firstArgument));
+            CotCalculator calculator = new CotCalculator();
+            double result = calculator.Calculate(0);
+            Assert.AreEqual((double)1/0,result);
         }
     }
 }

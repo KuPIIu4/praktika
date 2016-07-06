@@ -1,17 +1,17 @@
-﻿namespace Calc_IVT_152_DB.OneArgsCalc
+﻿using NUnit.Framework;
+
+namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class FactorialCalc : IOneArgumentCalculator
+    [TestFixture]
+    public class FactorialCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            if (firstArgument > 1)
-            {
-                return firstArgument*Calculate(firstArgument - 1);
-            }
-            else
-            {
-                return 1;
-            }
+            FactorialCalculator calculator = new FactorialCalculator();
+            double result = calculator.Calculate(4);
+            Assert.AreEqual(24,result);
         }
     }
 }
+

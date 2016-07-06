@@ -1,12 +1,17 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.OneArgsCalc
 {
-    public class TanCalculator : IOneArgumentCalculator
+    [TestFixture]
+    public class TanCalculatorTests
     {
-        public double Calculate(double firstArgument)
+        [Test]
+        public void CalculateTest()
         {
-            return Math.Tan(firstArgument);
+            TanCalculator calculator = new TanCalculator();
+            double result = calculator.Calculate(0);
+            Assert.AreEqual(0, result);
         }
     }
 }
+

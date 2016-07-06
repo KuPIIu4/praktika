@@ -8,7 +8,7 @@ namespace Calc_IVT_152_DB.OneArgsCalc
         {
             switch (calcName)
             {
-                case "buttonSin":
+              /*  case "buttonSin":
                     return new SinCalculator();
                 case "buttonCos":
                     return new CosCalculator();
@@ -17,7 +17,7 @@ namespace Calc_IVT_152_DB.OneArgsCalc
                 case "buttonLn":
                     return new LnCalculator();
                 case "buttonLg":
-                    return new LgCalculator();
+                    return new LgCalculator();*/
                 default:
                     throw new Exception("Неизвестная мат. операция");
             }

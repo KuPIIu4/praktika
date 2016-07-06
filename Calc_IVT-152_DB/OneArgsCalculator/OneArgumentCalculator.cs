@@ -13,7 +13,7 @@ namespace Calc_IVT_152_DB.OneArgsCalc
                 case "buttonCos":
                     return new CosCalculator();
                 case "buttonFact":
-                    return new FactorialCalc();
+                    return new FactorialCalculator();
                 case "buttonLn":
                     return new LnCalculator();
                 case "buttonLg":
