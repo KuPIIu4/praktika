@@ -24,7 +24,7 @@ namespace Calc_IVT_152_DB
                     array[i] = Convert.ToDouble(dataGridView1.Rows[i].Cells[0].Value.ToString());
                 }
                 ISortArray sort = SortArrayFactory.Create(((Button)sender).Name);
-                sort.SortArray(array);
+                sort.SortArray(array );
                 for (int i = 0; i < length; i++)
                 {
                     dataGridView1.Rows[i].Cells[0].Value = array[i].ToString();

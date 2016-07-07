@@ -1,20 +1,16 @@
 ﻿using System;
+using NUnit.Framework;
 
 namespace Calc_IVT_152_DB.SortArray
 {
-    public static class SortArrayFactory
+    public class SortArrayFactoryTests
     {
-        public static ISortArray Create(string SortType)
+        [TestCase("buttonBubble", typeof(BubbleSort))]
+        [TestCase("buttonQuick", typeof(QuickSort))]
+        public void CalculateTest(string name, Type type)
         {
-            switch (SortType)
-            {
-                case "buttonBubble":
-                    return new BubbleSort();
-                case "buttonQuick":
-                    return new QuickSort();
-                default:
-                    throw new Exception("Неизвестный метод сортировки");
-            }
+            var calculator = SortArrayFactory.Create(name);
+            Assert.IsInstanceOf(type, calculator);
         }
     }
 }
