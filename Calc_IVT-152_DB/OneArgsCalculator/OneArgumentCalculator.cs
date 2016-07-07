@@ -4,6 +4,15 @@ namespace Calc_IVT_152_DB.OneArgsCalculator
 {
     public static class OneArgumentCalculator
     {
+        /// <summary>
+        /// Creates calculator of function by name
+        /// </summary>
+        /// <param name="calcName">
+        /// Name of calculator
+        /// </param>
+        /// <returns>
+        /// object of calculator
+        /// </returns>
         public static IOneArgumentCalculator CreateCalculator(string calcName)
         {
             switch (calcName)

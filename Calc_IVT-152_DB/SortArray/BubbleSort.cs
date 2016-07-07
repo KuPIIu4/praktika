@@ -2,6 +2,12 @@
 {
     public class BubbleSort : ISortArray
     {
+        /// <summary>
+        /// sorts array by bubble method
+        /// </summary>
+        /// <param name="array">
+        /// pointer to double array
+        /// </param>
         public void SortArray(double[] array)
         {
             for (int i = 0; i < array.Length; i++)

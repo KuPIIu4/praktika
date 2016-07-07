@@ -2,6 +2,12 @@
 {
     public class QuickSort : ISortArray
     {
+        /// <summary>
+        /// sorts array by quick method
+        /// </summary>
+        /// <param name="array">
+        /// pointer to double array
+        /// </param>
         public void SortArray(double[] array)
         {
             sort(array, 0, array.Length - 1);

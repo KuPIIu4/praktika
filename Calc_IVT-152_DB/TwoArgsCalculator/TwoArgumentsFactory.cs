@@ -4,6 +4,15 @@ namespace Calc_IVT_152_DB.TwoArgsCalculator
 {
     public static class TwoArgumentsFactory
     {
+        /// <summary>
+        /// Creates calculator of function by name
+        /// </summary>
+        /// <param name="calcName">
+        /// Name of calculator
+        /// </param>
+        /// <returns>
+        /// object of calculator
+        /// </returns>
         public static ITwoArgumentsCalculator CreateCalculator(string calcName)
         {
             switch (calcName)
