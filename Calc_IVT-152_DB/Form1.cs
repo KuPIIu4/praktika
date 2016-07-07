@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Calc_IVT_152_DB.OneArgsCalc;
+using Calc_IVT_152_DB.SortArray;
 using Calc_IVT_152_DB.TwoArgsCalc;
 
 namespace Calc_IVT_152_DB
@@ -12,6 +13,28 @@ namespace Calc_IVT_152_DB
             InitializeComponent();
         }
 
+        private void button_ClickSort(object sender, EventArgs e)
+        {
+            try
+            {
+                int length = dataGridView1.RowCount-1;
+                double[] array = new double[length];
+                for (int i = 0; i < length; i++)
+                {
+                    array[i] = Convert.ToDouble(dataGridView1.Rows[i].Cells[0].Value.ToString());
+                }
+                ISortArray sort = SortArrayFactory.Create(((Button)sender).Name);
+                sort.SortArray(array);
+                for (int i = 0; i < length; i++)
+                {
+                    dataGridView1.Rows[i].Cells[0].Value = array[i].ToString();
+                }
+            }
+            catch (Exception exp)
+            {
+                MessageBox.Show(exp.Message);
+            }
+        }
         private void button_ClickTwoArg(object sender, EventArgs e)
         {
             try
@@ -41,11 +64,6 @@ namespace Calc_IVT_152_DB
             {
                 MessageBox.Show(exp.Message);
             }
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
     }

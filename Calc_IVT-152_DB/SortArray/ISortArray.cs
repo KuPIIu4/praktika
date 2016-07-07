@@ -2,6 +2,6 @@
 {
     public interface ISortArray
     {
-        void SortArray(double[] array, int length);
+        void SortArray(double[] array);
     }
 }

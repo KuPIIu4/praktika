@@ -52,6 +52,9 @@
     <Compile Include="OneArgsCalculator\SinCalculatorTests.cs" />
     <Compile Include="OneArgsCalculator\TanCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortArray\BubbleSortTest.cs" />
+    <Compile Include="SortArray\QuickSortTest.cs" />
+    <Compile Include="SortArray\SortArrayFactoryTest.cs" />
     <Compile Include="TwoArgsCalculator\AdditionCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\DivisionCalculatorTests.cs" />
     <Compile Include="TwoArgsCalculator\ExponentCalculatorTests.cs" />

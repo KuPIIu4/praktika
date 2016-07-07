@@ -48,6 +48,7 @@
     <Compile Include="OneArgsCalculator\TanCalculator.cs" />
     <Compile Include="SortArray\ISortArray.cs" />
     <Compile Include="SortArray\BubbleSort.cs" />
+    <Compile Include="SortArray\QuickSort.cs" />
     <Compile Include="SortArray\SortArrayFactory.cs" />
     <Compile Include="TwoArgsCalculator\AdditionCalculator.cs" />
     <Compile Include="OneArgsCalculator\CosCalculator.cs" />
