@@ -1,7 +1,8 @@
 ﻿using System;
+using Calc_IVT_152_DB.SortArray;
 using NUnit.Framework;
 
-namespace Calc_IVT_152_DB.SortArray
+namespace Calc_IVT_152_DBTests.SortArray
 {
     public class SortArrayFactoryTests
     {

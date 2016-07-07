@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 
-namespace Calc_IVT_152_DB.OneArgsCalc
+namespace Calc_IVT_152_DB.OneArgsCalculator
 {
     public class CotCalculator : IOneArgumentCalculator
     {
@@ -11,7 +10,8 @@ namespace Calc_IVT_152_DB.OneArgsCalc
             {
                 throw new Exception("Не существует");
             }
-                return (1.0/Math.Tan(firstArgument));
+
+            return (1.0 / Math.Tan(firstArgument));
         }
     }
 }

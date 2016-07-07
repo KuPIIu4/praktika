@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Calc_IVT_152_DB.OneArgsCalc
+namespace Calc_IVT_152_DB.OneArgsCalculator
 {
     public class TanCalculator : IOneArgumentCalculator
     {
         public double Calculate(double firstArgument)
         {
-            if ((((Math.PI / 2) + firstArgument) % Math.PI) == 0.0)
+            if ((Math.PI / 2 + firstArgument) % Math.PI == 0.0)
             {
                 throw new Exception("Не существует");
             }

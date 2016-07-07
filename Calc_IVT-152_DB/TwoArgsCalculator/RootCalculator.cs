@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calc_IVT_152_DB.TwoArgsCalc
+namespace Calc_IVT_152_DB.TwoArgsCalculator
 {
     public class RootCalculator : ITwoArgumentsCalculator
     {

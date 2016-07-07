@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calc_IVT_152_DB.OneArgsCalc
+namespace Calc_IVT_152_DB.OneArgsCalculator
 {
     public static class OneArgumentCalculator
     {

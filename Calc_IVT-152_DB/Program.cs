@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Calc_IVT_152_DB.TwoArgsCalc
+namespace Calc_IVT_152_DB
 {
     static class Program
     {

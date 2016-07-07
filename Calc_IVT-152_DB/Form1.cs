@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using Calc_IVT_152_DB.OneArgsCalc;
+using Calc_IVT_152_DB.OneArgsCalculator;
 using Calc_IVT_152_DB.SortArray;
-using Calc_IVT_152_DB.TwoArgsCalc;
+using Calc_IVT_152_DB.TwoArgsCalculator;
 
 namespace Calc_IVT_152_DB
 {

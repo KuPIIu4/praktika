@@ -1,7 +1,8 @@
 ﻿using System;
+using Calc_IVT_152_DB.TwoArgsCalculator;
 using NUnit.Framework;
 
-namespace Calc_IVT_152_DB.TwoArgsCalc
+namespace Calc_IVT_152_DBTests.TwoArgsCalculator
 {
     [TestFixture]
     public class LogCalculatorTests

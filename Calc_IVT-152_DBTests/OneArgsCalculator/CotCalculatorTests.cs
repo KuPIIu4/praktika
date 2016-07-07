@@ -1,7 +1,8 @@
 ﻿using System;
+using Calc_IVT_152_DB.OneArgsCalculator;
 using NUnit.Framework;
 
-namespace Calc_IVT_152_DB.OneArgsCalc
+namespace Calc_IVT_152_DBTests.OneArgsCalculator
 {
     [TestFixture]
     public class CotCalculatorTests

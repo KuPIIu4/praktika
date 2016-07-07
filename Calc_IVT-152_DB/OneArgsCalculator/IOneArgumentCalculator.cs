@@ -1,4 +1,4 @@
-﻿namespace Calc_IVT_152_DB.OneArgsCalc
+﻿namespace Calc_IVT_152_DB.OneArgsCalculator
 {
     public interface IOneArgumentCalculator
     {
