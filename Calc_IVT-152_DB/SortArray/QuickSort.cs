@@ -12,6 +12,18 @@
         {
             sort(array, 0, array.Length - 1);
         }
+        /// <summary>
+        /// directly sort function
+        /// </summary>
+        /// <param name="array">
+        /// pointer to double array
+        /// </param>
+        /// <param name="l">
+        /// left border of array
+        /// </param>
+        /// <param name="r">
+        /// right border of array
+        /// </param>
         private void sort(double[] array, int l, int r)
         {
             double x = array[l + (r - l) / 2];
