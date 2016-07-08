@@ -1,7 +1,10 @@
-﻿namespace Calc_IVT_152_DB.SortArray
+﻿using System;
+
+namespace Calc_IVT_152_DB.SortArray
 {
     public class QuickSort : ISortArray
     {
+        private Random r1;
         /// <summary>
         /// sorts array by quick method
         /// </summary>
@@ -10,7 +13,8 @@
         /// </param>
         public void SortArray(double[] array)
         {
-            sort(array, 0, array.Length - 1);
+            r1 = new Random();
+            Sort(array, 0, array.Length - 1);
         }
         /// <summary>
         /// directly sort function
@@ -24,9 +28,10 @@
         /// <param name="r">
         /// right border of array
         /// </param>
-        private void sort(double[] array, int l, int r)
+        private void Sort(double[] array, int l, int r)
         {
-            double x = array[l + (r - l) / 2];
+            
+            double x = array[l + r1.Next() % (r - l)];//array[l + (r - l) / 2];
             int i = l;
             int j = r;
             while (i <= j)
@@ -50,12 +55,12 @@
             }
             if (i < r)
             {
-                sort(array, i, r);
+                Sort(array, i, r);
             }
 
             if (l < j)
             {
-                sort(array, l, j);
+                Sort(array, l, j);
             }
         }
     }

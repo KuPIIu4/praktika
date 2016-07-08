@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Calc_IVT_152_DB.OneArgsCalculator;
 using Calc_IVT_152_DB.SortArray;
 using Calc_IVT_152_DB.TwoArgsCalculator;
@@ -17,14 +18,17 @@ namespace Calc_IVT_152_DB
         {
             try
             {
-                int length = dataGridView1.RowCount-1;
+                int length = dataGridView1.RowCount;
                 double[] array = new double[length];
                 for (int i = 0; i < length; i++)
                 {
                     array[i] = Convert.ToDouble(dataGridView1.Rows[i].Cells[0].Value.ToString());
                 }
                 ISortArray sort = SortArrayFactory.Create(((Button)sender).Name);
+                Int64 g = Environment.TickCount;
                 sort.SortArray(array );
+                g = Environment.TickCount - g;
+                MessageBox.Show(g.ToString());
                 for (int i = 0; i < length; i++)
                 {
                     dataGridView1.Rows[i].Cells[0].Value = array[i].ToString();
@@ -68,8 +72,21 @@ namespace Calc_IVT_152_DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            double[] array = new double[1111111];
+            Random r1 = new Random();
+            for (int i = 0; i < 1111111; i++)
+            {
+                array[i] = r1.Next();
+            }
+            dataGridView1.RowCount = 1111111;
+            for (int i = 0; i < 1111111; i++)
+            {
+                dataGridView1.Rows[i].Cells[0].Value = array[i].ToString();
+            }
+            Int64 g = Environment.TickCount;
+            Array.Sort(array);
+            g = Environment.TickCount - g;
+            MessageBox.Show(g.ToString());
         }
-
     }
 }

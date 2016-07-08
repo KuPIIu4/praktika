@@ -1,0 +1,18 @@
+﻿<h2>Calculator</h2>
+
+<form action="Index" method="POST">
+    <input type="number" step="0.0001" name="firstValue"/>
+    <input type="number" step="0.0001" name="secondValue" />
+    @if (ViewBag.Result != null)
+    {
+        <p>@ViewBag.Result</p>
+    } 
+    <hr/>
+    @for (int i = 0; i < ViewBag.Operations.Length; i++)
+    {
+        <input id='@("Operation" + i)' type="radio" name="operation" value="@ViewBag.Operations[i].Value" @(ViewBag.Operations[i].Selected ? "checked" : "" ) />
+        <label for='@("Operation" + i)'>@ViewBag.Operations[i].Text</label>
+        <br/>
+    }
+    <input type="submit" value="Вычислить"/>
+</form>
